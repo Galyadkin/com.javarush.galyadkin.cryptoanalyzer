@@ -6,7 +6,7 @@ public class Cryption {
     // Количество символов алфавита: 94
     public static final int ALPHABETLENGTH = ALPHABET.length;
 
-    public char crypto(String mode, int key, int characterCode) {
+    public char crypto(int key, int characterCode) {
         int newIndex;
         int newKey = key % ALPHABETLENGTH > 0 ? key % ALPHABETLENGTH : ALPHABETLENGTH + key % ALPHABETLENGTH;
         char character = (char) characterCode;

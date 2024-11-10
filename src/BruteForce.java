@@ -80,7 +80,7 @@ public class BruteForce {
                     characterCode = bufferedReader.read();
                     bufferedReader.mark(1);
                     character = (char) characterCode;
-                    charEncrypted = new Cryption().crypto("decrypt", key, characterCode);
+                    charEncrypted = new Cryption().crypto(key, characterCode);
                     if (!(character == charEncrypted)) {
                         bufferedWriter.write(charEncrypted);
                     } else if (characterCode == 10 || characterCode == 13) {
