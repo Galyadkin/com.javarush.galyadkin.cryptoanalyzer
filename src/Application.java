@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Application {
@@ -39,6 +38,7 @@ public class Application {
                     break;
                 case 3:
                     System.out.println("Вызов метода Brute force");
+                    new BruteForce();
                     break;
                 case 0:
                     return;
