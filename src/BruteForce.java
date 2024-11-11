@@ -99,7 +99,7 @@ public class BruteForce {
             }
 
         }
-        System.out.println("Конец процедуры шифрования/дешифрования.");
+        System.out.println("Конец процедуры дешифрования Brute force.");
         System.out.println();
 
     }
