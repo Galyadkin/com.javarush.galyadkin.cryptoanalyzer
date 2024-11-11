@@ -66,6 +66,8 @@ public class BruteForce {
             }
         } while (!outFolderExist);
 
+        System.out.println("Происходит формирование выходных файлов, подождите, пожалуйста ...");
+
         // формирование выходных файлов
         for (int i = 1; i < Cryption.ALPHABETLENGTH; i++) {
             key = i;
@@ -80,7 +82,7 @@ public class BruteForce {
                     characterCode = bufferedReader.read();
                     bufferedReader.mark(1);
                     character = (char) characterCode;
-                    charEncrypted = new Cryption().crypto(key, characterCode);
+                    charEncrypted = new Cryption().crypto(-key, characterCode);
                     if (!(character == charEncrypted)) {
                         bufferedWriter.write(charEncrypted);
                     } else if (characterCode == 10 || characterCode == 13) {
@@ -99,7 +101,7 @@ public class BruteForce {
             }
 
         }
-        System.out.println("Конец процедуры дешифрования Brute force.");
+        System.out.println("Файлы сформированы, конец процедуры дешифрования Brute force.");
         System.out.println();
 
     }
